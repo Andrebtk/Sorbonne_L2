@@ -1,9 +1,9 @@
-#ifndef HASHLIB
-#define HASHLIB
+#ifndef HASH
+#define HASH
 
 #define TOMBSTONE ((void*)-1)
 
-int TABLE_SIZE = 128;
+#define TABLE_SIZE 128
  
 typedef struct hashentry {
 	char* key;
@@ -12,7 +12,6 @@ typedef struct hashentry {
 
 typedef struct hashmap {
 	int size;
-	int current_mem;
 	HashEntry* table;
 } HashMap;
 
